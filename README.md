@@ -21,15 +21,15 @@ to work, as Steam IDs are BigIntegers, unfortunately.
 
 An example of using every part of steamid-converter can be found in the file `ui.js`. Here's a brief overview:
 
-```Javascript
+```javascript
 SteamIDConverter.toSteamID64("STEAM_0:1:50279161");
-// => 76561198060824051
+// => "76561198060824051"
 
 SteamIDConverter.toSteamID("76561198060824051");
-// => STEAM_0:1:50279161
+// => "STEAM_0:1:50279161"
 
 SteamIDConverter.toSteamID3("STEAM_0:1:50279161");
-// => [U:1:100558323]
+// => "[U:1:100558323]"
 ```
 
 All three methods can take any of the other two forms of ID. I.e. `toSteamID()` can take a steamid64 or a steamid3.
@@ -48,5 +48,12 @@ SteamIDConverter.isSteamID64("76561198060824051");
 
 SteamIDConverter.isSteamID3("[U:1:100558323]");
 // => true
+```
+
+Also included is a helper function to generate profile links based on the user's steam id:
+
+```javascript
+SteamIDConverter.profileURL("[U:1:100558323]");
+// => "http://steamcommunity.com/profiles/76561198060824051"
 ```
 
