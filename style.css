@@ -1,0 +1,70 @@
+body {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.5;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+section {
+    margin: 40px auto;
+}
+
+/* -------------------------------------------------------------------------- */
+
+#steamid_converter {
+    min-width: 300px;
+    width: 50%;
+    border: 1px solid #444;
+    margin: 20px auto;
+}
+
+#steamid_converter input {
+    border: 1px solid #444;
+    margin: 20px auto;
+    display: block;
+    padding: 5px;
+    width: 80%;
+}
+
+#steamid_converter ul {
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.steamid {
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+#validation input[type=text]:valid {
+    color: green;
+}
+
+input:invalid {
+    color: red;
+    box-shadow: none;
+}
+
+#validation form {
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#validation input {
+    padding: 5px;
+    border: 1px solid #d3d3d3;
+}

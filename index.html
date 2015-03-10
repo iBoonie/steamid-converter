@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>steamid-converter</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="style.css">
+        
+        <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
+        <script src="js/converter.js"></script>       
+    </head>
+    <body>
+        <header>
+            <h1>SteamIDConverter.js</h1>
+        </header>
+        
+        <section id="steamid_converter">
+            <input id="converter" name="converter" placeholder="Enter a Steam ID">
+            <ul id="results">
+                <li id="id64">SteamID64: <span class="steamid">?</span></li>
+                <li id="id2">SteamID: <span class="steamid">?</span></li>
+                <li id="id3">SteamID3: <span class="steamid">?</span></li>
+                <li id="profile_url">Profile: <a class="steamid" href="#">?</a></li>
+            </ul>
+        </section>
+
+        <section id="validation">
+            <h2>Input Validation for SteamIDs:</h2>
+
+            <form onsubmit="alert('Success!'); return false;">
+                <input id="steamid64" type="text" placeholder="SteamID64" pattern="^[0-9]{17}$" required="">
+                <input type="submit" value="Submit">
+            </form>
+            
+            <form onsubmit="alert('Success!'); return false;">
+                <input id="steamid" type="text" placeholder="SteamID" pattern="^STEAM_[0-5]:[01]:\d+$" required="">
+                <input type="submit" value="Submit">
+            </form>
+            
+            <form onsubmit="alert('Success!'); return false;">
+                <input id="steamid3" type="text" placeholder="SteamID3" pattern="^\[U:1:[0-9]+\]$" required="">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <script src="js/ui.js"></script>
+    </body>
+</html>
