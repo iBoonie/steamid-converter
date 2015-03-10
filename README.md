@@ -11,7 +11,7 @@ download converter-min.js and link it in your html files where you need it:
 
 ```html
 <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
-<script src="js/converter.js"></script>
+<script src="js/converter-min.js"></script>
 ```
 
 Peterolson's [BigInteger.js](http://peterolson.github.com/BigInteger.js) is required for steamid-converter
@@ -50,10 +50,11 @@ SteamIDConverter.isSteamID3("[U:1:100558323]");
 // => true
 ```
 
-Also included is a helper function to generate profile links based on the user's steam id:
+Also included is a helper function to generate profile links based on the user's Steam ID:
 
 ```javascript
 SteamIDConverter.profileURL("[U:1:100558323]");
 // => "http://steamcommunity.com/profiles/76561198060824051"
 ```
 
+Just like the other conversion functions, `profileURL()` can take any form of Steam ID.
