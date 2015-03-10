@@ -14,7 +14,7 @@ download converter-min.js and link it in your html files where you need it:
 <script src="js/converter-min.js"></script>
 ```
 
-Peterolson's [BigInteger.js](http://peterolson.github.com/BigInteger.js) is required for steamid-converter
+Peterolson's [BigInteger.js](https://github.com/peterolson/BigInteger.js) is required for steamid-converter
 to work, as Steam IDs are BigIntegers, unfortunately.
 
 ##Usage
