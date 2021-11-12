@@ -5,11 +5,10 @@
 // Based off of information found at https://developer.valvesoftware.com/wiki/SteamID and
 // some experimentation of my own ^^.
 //
-// Requires peterolson's BigInteger.js library - https://github.com/peterolson/BigInteger.js
 
 var SteamIDConverter = {
 
-    BASE_NUM: bigInt("76561197960265728"), // "V" in the conversion algorithms
+    BASE_NUM: BigInt("76561197960265728"), // "V" in the conversion algorithms
 
     REGEX_STEAMID64: /^[0-9]{17}$/,
     REGEX_STEAMID:   /^STEAM_[0-5]:[01]:\d+$/,
@@ -35,7 +34,7 @@ var SteamIDConverter = {
             y = split[1];
 
         if(z && y) {
-            return v.plus(z*2).plus(y).toString();
+            return (v + BigInt(z*2) + BigInt(y)).toString();
         }
         return false;
     },
@@ -55,7 +54,7 @@ var SteamIDConverter = {
         }
 
         var v = this.BASE_NUM,
-            w = bigInt(steamid64),
+            w = BigInt(steamid64),
             y = w.mod(2).toString();
 
         w = w.minus(y).minus(v);

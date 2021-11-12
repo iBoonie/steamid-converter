@@ -1,3 +1,7 @@
+### Update
+Removed the BigInteger.js requirement, this now works standalone.
+Browsers are far enought along that it should be fine. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#browser_compatibility
+
 #steamid-converter
 
 Simple conversion between Steam's ID formats, and also an example of the validation
@@ -10,12 +14,8 @@ If you just want to cut to the chase and use it in your software, simply
 download converter-min.js and link it in your html files where you need it:
 
 ```html
-<script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
 <script src="js/converter-min.js"></script>
 ```
-
-Peterolson's [BigInteger.js](https://github.com/peterolson/BigInteger.js) is required for steamid-converter
-to work, as Steam IDs are BigIntegers, unfortunately.
 
 ##Usage
 
