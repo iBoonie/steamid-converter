@@ -1,14 +1,14 @@
 ### Update
-Removed the BigInteger.js requirement, this now works standalone.
-Browsers are far enought along that it should be fine. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#browser_compatibility
+Removed the BigInteger.js requirement, browsers are far enought along that it should be fine.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#browser_compatibility
 
-#steamid-converter
+### steamid-converter
 
 Simple conversion between Steam's ID formats, and also an example of the validation
 of inputs that require the various Steam ID formats (not actually handled by this library, but I figured
 hey, while I'm doing things with Regex...").
 
-##Installation
+### Installation
 
 If you just want to cut to the chase and use it in your software, simply
 download converter-min.js and link it in your html files where you need it:
@@ -17,7 +17,7 @@ download converter-min.js and link it in your html files where you need it:
 <script src="js/converter-min.js"></script>
 ```
 
-##Usage
+### Usage
 
 An example of using every part of steamid-converter can be found in the file `ui.js`. Here's a brief overview:
 
