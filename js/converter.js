@@ -21,6 +21,9 @@ var SteamIDConverter = {
         if(!steamid || typeof steamid !== "string") {
             return false;
         }
+        else if(this.isSteamID64(steamid)) {
+            return steamid;
+        }
         else if(this.isSteamID3(steamid)) {
             steamid = this.fromSteamID3(steamid);
         }
@@ -45,6 +48,9 @@ var SteamIDConverter = {
     toSteamID: function(steamid64) {
         if(!steamid64 || typeof steamid64 !== "string") {
             return false;
+        }
+        else if(this.isSteamID(steamid64)) {
+            return steamid64;
         }
         else if(this.isSteamID3(steamid64)) {
             return this.fromSteamID3(steamid64);
@@ -123,4 +129,3 @@ var SteamIDConverter = {
         return "http://steamcommunity.com/profiles/" + steamid64;
     }
 };
-
