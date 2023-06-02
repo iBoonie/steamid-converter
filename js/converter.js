@@ -55,14 +55,14 @@ var SteamIDConverter = {
 
         var v = this.BASE_NUM,
             w = BigInt(steamid64),
-            y = w.mod(2).toString();
+            y = w % 2n;
 
-        w = w.minus(y).minus(v);
+        w = (w - y) - v;
 
         if(w < 1) {
             return false;
         }
-        return "STEAM_0:" + y + ":" + w.divide(2).toString();
+        return "STEAM_0:" + y + ":" + (w / 2n).toString();
     },
 
     /**
